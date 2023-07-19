@@ -64,4 +64,22 @@ gitはそれを実現する分散管理型のサービスである。 \
 ## githubフロー
  githubフローとはgithub上での開発手法である。 \
  この手法ではmainブランチと作業用ブランチに分け、mainブランチは安定板として運用し、 \
- 作業用ブランチで開発を進め、マージを行うことでmainブランチを更新する。 
+ 作業用ブランチで開発を進め、マージを行うことでmainブランチを更新する。
+ ### githubフローは以下のような流れで開発が行われる。
+ 1. 分岐を作成する<br>
+ 自らのfeatureブランチを作成する。
+ 2. 変更を加える<br>
+ 作成したブランチ上でリポジトリに必要な変更を加える。その後変更をブランチにコミットしてプッシュする。各コミットにはどこを変更したか、分かりやすいメッセージをつけると良い。
+ 3. pull requestを作成する<br>
+ 変更に関するフィードバックを共同開発者に依頼するpull requestを作成する。
+ 4. レビューコメントに対応する。<br>
+ レビュー担当者がpull request全体にコメントしたり、特定の行、ファイルにコメントを追加できる。レビューに応じて引き続き変更をコミットしプッシュすることができる。
+ 5. pull requestをマージする<br>
+ pull requeseが承認されたら、pull requestをマージする。これによりブランチが自動的にマージされ、変更が既定のブランチに表示される。この履歴は全て記録される。
+ 6. ブランチを削除する<br>
+ pull requestをマージした後、ブランチを削除する。これは、ブランチでの作業が完了したことを示し、ユーザや他のユーザが誤って古いブランチを使用することを防ぐ。
+ 
+# 参考
+[┣ GitHub-flow | リポジトリ(GitLab)入門](https://zenn.dev/ryo_4947123/books/497459787cb294/viewer/branchstrategy_githubflow) <br>
+[GitHub Flowとは](https://zenn.dev/ryo_4947123/books/497459787cb294/viewer/branchstrategy_githubflow) <br>
+[GitHubフロー](https://docs.github.com/ja/get-started/quickstart/github-flow) <br>
